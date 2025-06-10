@@ -23,7 +23,7 @@ services:
     volumes:
       - uploads_data:/app/uploads
     environment:
-      - MONGODB_URI=mongodb://mongo:27017/la-vitrina
+      - MONGODB_URI=mongodb://admin:secretpassword@mongo:27017/la-vitrina?authSource=admin
 
   mongo:
     image: mongo:7
@@ -35,6 +35,8 @@ services:
       - mongo_data:/data/db
     environment:
       - MONGO_INITDB_DATABASE=la-vitrina
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=secretpassword
 
 volumes:
   mongo_data:

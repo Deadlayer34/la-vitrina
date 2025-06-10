@@ -5,7 +5,7 @@ import { initializeAdmin } from './config/setup';
 
 dotenv.config(); // Cargar variables de entorno desde .env
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/la-vitrina';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://admin:secretpassword@localhost:27017/la-vitrina?authSource=admin';
 const PORT = process.env.PORT || 3000;
 
 console.log(PORT, MONGODB_URI);

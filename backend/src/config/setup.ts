@@ -14,7 +14,7 @@ export const initializeAdmin = async () => {
       // Crear el usuario admin
       const adminUser = new User({
         name: 'Admin',
-        email: 'admin3@vitrina.com',
+        email: 'admin@vitrina.com',
         password: hashedPassword,
         role: 'admin'
       });
